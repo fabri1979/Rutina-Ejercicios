@@ -1,5 +1,5 @@
 // Cambia el número de versión cada vez que actualices el index.html
-const CACHE = 'rutina-v2';
+const CACHE = 'rutina-v3';
 
 const ARCHIVOS = [
   './',
@@ -36,6 +36,6 @@ self.addEventListener('fetch', e => {
         caches.open(CACHE).then(c => c.put(e.request, copia));
         return r;
       })
-      .catch(() => caches.match(e.request))
+      .catch(() => caches.match(e.request, { ignoreSearch: true }))
   );
 });

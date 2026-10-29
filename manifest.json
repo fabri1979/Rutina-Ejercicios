@@ -1,8 +1,8 @@
 {
   "name": "Rutina Semanal",
   "short_name": "Rutina",
-  "id": "rutina-ejercicio-app",
-  "start_url": "./index.html",
+  "id": "rutina-semanal-v3",
+  "start_url": "./index.html?app=1",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
