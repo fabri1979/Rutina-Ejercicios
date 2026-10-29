@@ -1,13 +1,13 @@
 {
-  "name": "Rutina Semanal",
-  "short_name": "Rutina",
-  "id": "rutina-semanal-v3",
-  "start_url": "./index.html?app=1",
+  "name": "Calculadora Kotta",
+  "short_name": "Kotta",
+  "id": "kotta-calculadora",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#BFE9FF",
-  "theme_color": "#BFE9FF",
+  "background_color": "#0B4455",
+  "theme_color": "#0B4455",
   "icons": [
     {
       "src": "icon-192.png",
