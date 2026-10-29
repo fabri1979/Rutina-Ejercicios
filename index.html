@@ -245,8 +245,8 @@ input[type="date"].fecha-hidden{position:absolute;opacity:0;pointer-events:none;
       <div class="field-hint">Cuota máxima disponible asignada al cliente en la plataforma de crédito</div>
       <div class="input-wrap">
         <span class="pfx">$</span>
-        <input type="number" id="cuota" inputmode="decimal" placeholder="0.00"
-               class="with-pfx" min="0.01" step="0.01" autocomplete="off">
+        <input type="text" id="cuota" inputmode="decimal" placeholder="0.00"
+               class="with-pfx" autocomplete="off">
       </div>
       <div class="field-err" id="err-cuota" hidden></div>
     </div>
@@ -432,7 +432,7 @@ function showErr(field, msg) {
 /* ── CÁLCULO ── */
 function calcular() {
   clearErrors();
-  const cuotaVal = parseFloat(document.getElementById('cuota').value);
+  const cuotaVal = parseFloat(document.getElementById('cuota').value.replace(',','.'));
   const dia  = parseInt(fDia.value);
   const mes  = parseInt(fMes.value);
   const anio = parseInt(fAnio.value);
@@ -509,13 +509,6 @@ function renderResults(resultados, edad, fila) {
   html += `</div>`;
 
   content.innerHTML = html;
-}
-</script>
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js');
-  });
 }
 </script>
 </body>
