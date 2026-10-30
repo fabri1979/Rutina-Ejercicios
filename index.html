@@ -157,12 +157,12 @@ footer{margin-top:28px;font-size:13px;color:var(--muted)}
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="eyebrow">Plan de entrenamiento · 46 años · 168 cm · sin lesiones</div>
+    <div class="eyebrow">Plan de entrenamiento · 46 años · 170 cm · 84 kg · sin lesiones</div>
     <h1>Rutina <span>semanal</span></h1>
-    <p class="lede">Seis días a la semana: 25 minutos de trote y 5 ejercicios de pesas. Cada grupo muscular se entrena dos veces por semana. Objetivo: bajar grasa abdominal y recuperar músculo.</p>
+    <p class="lede">Seis días a la semana: 30 minutos de cardio y 5 ejercicios de pesas. Cada grupo muscular se entrena dos veces por semana y el abdomen cuatro. Objetivo: bajar la barriga, fortalecer los músculos y acercarte a tu peso ideal.</p>
     <div class="chips">
-      <span class="chip">1 h 45 min por sesión</span>
-      <span class="chip">25 min trote + pesas</span>
+      <span class="chip">1 h 30 min por sesión</span>
+      <span class="chip">30 min cardio + pesas</span>
       <span class="chip">5 ejercicios al día</span>
       <span class="chip">Domingo descanso</span>
     </div>
@@ -186,13 +186,13 @@ footer{margin-top:28px;font-size:13px;color:var(--muted)}
         </dl>
       </div>
       <div class="gcard">
-        <h3>Los 25 min de trote</h3>
+        <h3>Los 30 min de cardio</h3>
         <div class="timeline">
           <div><b>0–5 min</b><span>Caminata cómoda, subiendo el ritmo poco a poco.</span></div>
-          <div><b>5–20 min</b><span>Trote moderado: puedes decir frases cortas sin ahogarte.</span></div>
-          <div><b>20–25 min</b><span>Bajas la velocidad y terminas caminando.</span></div>
+          <div><b>5–25 min</b><span><b style="font-family:inherit;color:var(--ink)">Trote por intervalos:</b> 1 min de trote más rápido + 2 min de trote suave, y repites. <b style="font-family:inherit;color:var(--ink)">Caminata en inclinación</b> (días de pierna): caminadora inclinada a paso rápido, sin agarrarte.</span></div>
+          <div><b>25–30 min</b><span>Bajas la velocidad y terminas caminando.</span></div>
         </div>
-        <p style="margin-top:10px;color:var(--muted);font-size:14px">Si aún te falta resistencia, alterna 1 minuto de trote con 1–2 minutos caminando.</p>
+        <p style="margin-top:10px;color:var(--muted);font-size:14px">Si aún te falta resistencia, en los intervalos cambia el trote suave por caminata.</p>
       </div>
       <div class="gcard">
         <h3>Tu primer mes</h3>
@@ -219,12 +219,14 @@ footer{margin-top:28px;font-size:13px;color:var(--muted)}
           <li><b>Alimentación:</b> come algo menos de lo que gastas. Prioriza proteína, verduras, frutas y comida poco procesada. Reduce gaseosas, frituras, alcohol y porciones grandes.</li>
           <li><b>Pesas:</b> conservan el músculo mientras bajas de peso.</li>
           <li><b>Ritmo razonable:</b> perder entre 0,25 y 0,75 kg por semana.</li>
+          <li><b>Tu meta:</b> con 170 cm, el peso saludable llega hasta unos 72 kg. Primera meta: 78 kg en unos 3 meses; luego sigue hacia 72–74 kg.</li>
+          <li><b>Mide la cintura</b> cada 2 semanas a la altura del ombligo: es la mejor señal de que la barriga está bajando.</li>
         </ul>
       </div>
       <div class="gcard alert">
         <h3>Detente si…</h3>
         <p>Sientes dolor en el pecho, mareo intenso o falta de aire fuera de lo normal. Suspende el ejercicio y busca atención médica.</p>
-        <p style="margin:0">Si no te recuperas bien entre sesiones, baja la carga o toma un día extra de descanso. Seis días seguidos es exigente al retomar.</p>
+        <p style="margin:0">Si no te recuperas bien entre sesiones, baja la carga o toma un día extra de descanso. Seis días seguidos es exigente al retomar. Por tu edad y peso, conviene un chequeo médico antes de subir la intensidad.</p>
       </div>
     </div>
   </section>
@@ -291,49 +293,49 @@ const FIG={
 
 // ---------- datos de la rutina ----------
 const DAYS=[
- {id:'lunes',short:'Lun',name:'Lunes',k:'push',group:'Pecho, hombros y tríceps',goal:'Desarrollar el pecho, dar anchura a los hombros y fortalecer la parte posterior de los brazos.',ex:[
-  {n:'Press de pecho en máquina',s:3,r:'10–12',d:'90 s',f:'chestPress',st:['Siéntate con la espalda pegada al respaldo y los pies firmes en el suelo.','Ajusta el asiento para que las agarraderas queden a la altura del pecho.','Empuja las agarraderas hacia delante sin bloquear los codos.','Regresa lentamente hasta una posición cómoda, sin forzar los hombros.'],w:'Principalmente el pecho, además de los tríceps y la parte delantera de los hombros.'},
-  {n:'Press inclinado con mancuernas',s:2,r:'10–12',d:'90 s',f:'inclineDB',st:['Coloca el banco con una inclinación de unos 30 grados.','Sostén una mancuerna en cada mano, a los lados de la parte superior del pecho.','Empuja las mancuernas hacia arriba y ligeramente hacia dentro.','Bájalas lentamente, manteniendo las muñecas rectas.'],w:'La parte superior del pecho. No uses un peso que te obligue a arquear la espalda.'},
-  {n:'Elevaciones laterales',s:2,r:'12–15',d:'60 s',f:'lateralRaise',st:['Ponte de pie con una mancuerna ligera en cada mano.','Mantén los codos ligeramente flexionados.','Levanta los brazos hacia los lados hasta la altura aproximada de los hombros.','Baja despacio, sin balancear el cuerpo.'],w:'Los lados de los hombros, que dan anchura visual.'},
-  {n:'Extensión de tríceps en polea',s:2,r:'10–15',d:'60–75 s',f:'pushdown',st:['Colócate frente a una polea alta con una barra o cuerda.','Mantén los codos pegados a los costados.','Empuja el accesorio hacia abajo hasta extender los brazos.','Regresa lentamente sin mover los codos hacia delante y atrás.'],w:'La parte posterior de los brazos (tríceps).'},
-  {n:'Aperturas de pecho en máquina',s:2,r:'12–15',d:'60–75 s',f:'pecDeck',st:['Siéntate en la máquina con la espalda apoyada.','Coloca los brazos en las almohadillas o sujeta las agarraderas, según el modelo.','Junta los brazos delante del pecho, como si abrazaras un árbol grande.','Regresa lentamente hasta sentir un estiramiento suave, sin llevar los codos demasiado atrás.'],w:'El pecho. Usa un recorrido cómodo para los hombros.'}
- ]},
- {id:'martes',short:'Mar',name:'Martes',k:'pull',group:'Espalda y bíceps',goal:'Dar amplitud y grosor a la espalda, mejorar la postura y trabajar los brazos.',ex:[
-  {n:'Jalón al pecho',s:3,r:'10–12',d:'90 s',f:'latPulldown',st:['Siéntate y ajusta el soporte para que los muslos no se levanten.','Agarra la barra un poco más abierta que los hombros.','Lleva la barra a la parte superior del pecho, bajando los codos hacia los costados.','Devuelve la barra lentamente hasta estirar los brazos.'],w:'Los dorsales, que dan amplitud a la espalda.',x:'Evita tirar la barra detrás de la nuca o balancearte para moverla.'},
-  {n:'Remo sentado en polea',s:3,r:'10–12',d:'90 s',f:'seatedRow',st:['Siéntate con las rodillas ligeramente flexionadas y la espalda recta.','Sujeta el agarre con ambas manos.','Tira hacia el abdomen llevando los codos hacia atrás y aprieta suavemente los omóplatos.','Regresa lentamente sin encorvar la espalda.'],w:'La zona media de la espalda y los músculos de la postura.'},
-  {n:'Remo con pecho apoyado',s:2,r:'10–12',d:'75–90 s',f:'chestRow',st:['Apoya el pecho en el soporte de la máquina.','Sujeta las manijas y lleva los codos hacia atrás.','Junta suavemente los omóplatos al terminar el movimiento.','Regresa sin despegar el pecho del soporte.'],w:'La espalda media. El soporte evita balanceos.'},
-  {n:'Curl de bíceps con mancuernas',s:2,r:'10–12',d:'60–75 s',f:'curl',st:['Ponte de pie con una mancuerna en cada mano y las palmas hacia delante.','Mantén los codos cerca del cuerpo.','Dobla los codos para subir las mancuernas.','Baja despacio sin balancearte ni arquear la espalda.'],w:'La parte delantera del brazo (bíceps).'},
-  {n:'Curl martillo',s:2,r:'10–12',d:'60 s',f:'hammer',st:['Sujeta las mancuernas con las palmas mirándose entre sí.','Sube las mancuernas doblando los codos.','Mantén las muñecas rectas y los codos pegados al cuerpo.','Baja lentamente.'],w:'Bíceps, braquial y antebrazo: dan grosor al brazo.'}
- ]},
- {id:'miercoles',short:'Mié',name:'Miércoles',k:'legs',group:'Piernas y abdomen',goal:'Las piernas son los músculos más grandes del cuerpo: entrenarlas ayuda a conservar fuerza y músculo mientras bajas de peso.',ex:[
+ {id:'lunes',short:'Lun',name:'Lunes',k:'legs',c:'Caminata en inclinación',group:'Piernas, glúteos y abdomen',goal:'Empiezas la semana con los músculos más grandes del cuerpo: son los que más energía gastan y más ayudan a bajar de peso.',ex:[
+  {n:'Sentadilla con mancuerna al pecho',s:3,r:'10–12',d:'90 s',f:'goblet',st:['Sostén una mancuerna frente al pecho.','Separa los pies más o menos al ancho de los hombros.','Dobla las rodillas y lleva la cadera hacia abajo y atrás, con los pies bien apoyados.','Sube empujando el suelo.'],w:'Muslos y glúteos. Es el ejercicio que más músculo trabaja de toda la semana.',x:'Si pierdes el equilibrio, empieza sin peso o usa una máquina guiada.'},
   {n:'Prensa de piernas',s:3,r:'10–12',d:'90–120 s',f:'legPress',st:['Siéntate con toda la espalda apoyada en el respaldo.','Coloca los pies en la plataforma, más o menos al ancho de los hombros.','Quita el seguro y baja doblando las rodillas hasta donde la espalda y la pelvis sigan apoyadas.','Empuja sin bloquear las rodillas.'],w:'Muslos y glúteos. No bajes más de lo que tu movilidad permite.'},
   {n:'Curl femoral sentado',s:3,r:'10–12',d:'75–90 s',f:'legCurl',st:['Ajusta el rodillo para que quede cerca de los tobillos.','Flexiona las rodillas llevando el rodillo hacia abajo y atrás.','Mantén el tronco apoyado.','Regresa lentamente sin dejar caer el peso.'],w:'La parte posterior de los muslos (isquiotibiales).'},
-  {n:'Extensión de cuádriceps',s:2,r:'12–15',d:'60–75 s',f:'legExt',st:['Siéntate con la espalda apoyada y las piernas detrás del rodillo.','Estira las rodillas hasta casi extenderlas por completo.','Baja lentamente hasta la posición inicial.'],w:'La parte delantera de los muslos. No des patadas ni uses impulso.'},
-  {n:'Elevación de talones',s:2,r:'12–15',d:'60 s',f:'calf',st:['Coloca la parte delantera de los pies en la plataforma de la máquina.','Eleva los talones hasta quedar de puntillas.','Haz una pausa breve arriba.','Baja de forma controlada, sin rebotar.'],w:'Las pantorrillas.'},
-  {n:'Plancha abdominal',s:3,r:'20–30 s',d:'45–60 s',f:'plank',st:['Apoya los antebrazos y las puntas de los pies en el suelo.','Mantén cabeza, espalda, cadera y piernas alineadas.','Aprieta el abdomen y los glúteos.','Respira normalmente y no hundas la cintura.'],w:'La estabilidad del tronco. Fortalece el abdomen, pero no quema la grasa de esa zona.'}
+  {n:'Puente de glúteos',s:3,r:'12–15',d:'60 s',f:'bridge',st:['Acuéstate boca arriba con las rodillas dobladas y los pies apoyados.','Aprieta los glúteos y eleva la cadera hasta alinear hombros, cadera y rodillas.','Haz una pausa breve arriba.','Baja despacio, sin arquear de más la espalda.'],w:'Los glúteos y la parte baja de la espalda: protegen la cintura.'},
+  {n:'Plancha abdominal',s:3,r:'30–40 s',d:'45–60 s',f:'plank',st:['Apoya los antebrazos y las puntas de los pies en el suelo.','Mantén cabeza, espalda, cadera y piernas alineadas.','Aprieta el abdomen y los glúteos.','Respira normalmente y no hundas la cintura.'],w:'La faja del abdomen. Fortalece y aplana la zona, pero la grasa baja con la alimentación y el cardio.'}
  ]},
- {id:'jueves',short:'Jue',name:'Jueves',k:'push',group:'Pecho, hombros y tríceps',goal:'Complementa el lunes con otros ángulos, sin repetir exactamente la misma sesión.',ex:[
+ {id:'martes',short:'Mar',name:'Martes',k:'push',c:'Trote por intervalos',group:'Pecho, hombros y tríceps',goal:'Ejercicios de empuje con máquinas y mancuernas para fortalecer el torso superior.',ex:[
+  {n:'Press de pecho en máquina',s:3,r:'10–12',d:'90 s',f:'chestPress',st:['Siéntate con la espalda pegada al respaldo y los pies firmes en el suelo.','Ajusta el asiento para que las agarraderas queden a la altura del pecho.','Empuja las agarraderas hacia delante sin bloquear los codos.','Regresa lentamente hasta una posición cómoda, sin forzar los hombros.'],w:'Principalmente el pecho, además de los tríceps y la parte delantera de los hombros.'},
   {n:'Press de hombros en máquina',s:3,r:'10–12',d:'90 s',f:'shoulderPress',st:['Siéntate con la espalda apoyada y las agarraderas a la altura de los hombros.','Empuja hacia arriba sin arquear la espalda.','Baja controladamente hasta una posición cómoda.'],w:'Principalmente hombros y tríceps.'},
-  {n:'Aperturas de pecho en máquina',s:3,r:'12',d:'75 s',f:'pecDeck',st:['Apoya la espalda en el respaldo.','Abre los brazos hasta sentir un estiramiento suave.','Junta las almohadillas o agarraderas delante del pecho.','Regresa despacio sin forzar los hombros.'],w:'El pecho.'},
-  {n:'Elevaciones laterales',s:2,r:'12–15',d:'60 s',f:'lateralRaise',st:['Sostén mancuernas ligeras a los lados del cuerpo.','Eleva los brazos hacia los lados con los codos ligeramente doblados.','Llega más o menos a la altura de los hombros.','Baja despacio.'],w:'La parte lateral del hombro.'},
-  {n:'Extensión de tríceps sobre la cabeza',s:2,r:'10–12',d:'60–75 s',f:'overhead',st:['Ponte de espaldas a una polea baja o sujeta una mancuerna ligera con ambas manos.','Lleva las manos detrás de la cabeza con los codos doblados.','Extiende los codos para llevar las manos hacia arriba.','Regresa lentamente, con los codos estables.'],w:'El tríceps.',x:'Si te duele el hombro, suspende este ejercicio y usa una alternativa cómoda.'},
-  {n:'Press de pecho en máquina',s:2,r:'10–12',d:'75–90 s',f:'chestPress',st:['Ajusta el asiento para que las agarraderas queden a la altura del pecho.','Apoya la espalda y empuja hacia delante.','Regresa lentamente sin forzar el hombro ni bloquear los codos.'],w:'El pecho otra vez, con volumen moderado.'}
+  {n:'Press inclinado con mancuernas',s:2,r:'10–12',d:'90 s',f:'inclineDB',st:['Coloca el banco con una inclinación de unos 30 grados.','Sostén una mancuerna en cada mano, a los lados de la parte superior del pecho.','Empuja las mancuernas hacia arriba y ligeramente hacia dentro.','Bájalas lentamente, manteniendo las muñecas rectas.'],w:'La parte superior del pecho. No uses un peso que te obligue a arquear la espalda.'},
+  {n:'Elevaciones laterales',s:2,r:'12–15',d:'60 s',f:'lateralRaise',st:['Ponte de pie con una mancuerna ligera en cada mano.','Mantén los codos ligeramente flexionados.','Levanta los brazos hacia los lados hasta la altura aproximada de los hombros.','Baja despacio, sin balancear el cuerpo.'],w:'Los lados de los hombros, que dan anchura visual.'},
+  {n:'Extensión de tríceps en polea',s:2,r:'12–15',d:'60 s',f:'pushdown',st:['Colócate frente a una polea alta con una barra o cuerda.','Mantén los codos pegados a los costados.','Empuja el accesorio hacia abajo hasta extender los brazos.','Regresa lentamente sin mover los codos hacia delante y atrás.'],w:'La parte posterior de los brazos (tríceps).'}
  ]},
- {id:'viernes',short:'Vie',name:'Viernes',k:'pull',group:'Espalda y bíceps',goal:'Segunda sesión de tracción, con agarres y máquinas distintas a las del martes.',ex:[
-  {n:'Remo con pecho apoyado',s:3,r:'10–12',d:'90 s',f:'chestRow',st:['Apoya el pecho en el soporte de la máquina.','Tira de las manijas hacia el torso llevando los codos hacia atrás.','Junta suavemente los omóplatos.','Regresa controladamente.'],w:'La espalda media.'},
-  {n:'Jalón al pecho con agarre neutro',s:3,r:'10–12',d:'90 s',f:'neutralPulldown',st:['Siéntate y agarra las manijas con las palmas mirándose entre sí.','Lleva los codos hacia abajo y acerca las manijas a la parte superior del pecho.','Devuelve el peso lentamente.'],w:'Los dorsales y los brazos.'},
-  {n:'Curl en banco Scott o máquina',s:2,r:'10–12',d:'60–75 s',f:'preacher',st:['Apoya la parte posterior de los brazos en el cojín.','Dobla los codos para subir el peso.','Baja despacio, sin estirar los codos de golpe ni despegar los brazos del cojín.'],w:'Aísla el bíceps y evita el balanceo del cuerpo.'},
+ {id:'miercoles',short:'Mié',name:'Miércoles',k:'pull',c:'Trote por intervalos',group:'Espalda, bíceps y abdomen',goal:'Espalda fuerte para una mejor postura, con un ejercicio de control del abdomen al final.',ex:[
+  {n:'Jalón al pecho',s:3,r:'10–12',d:'90 s',f:'latPulldown',st:['Siéntate y ajusta el soporte para que los muslos no se levanten.','Agarra la barra un poco más abierta que los hombros.','Lleva la barra a la parte superior del pecho, bajando los codos hacia los costados.','Devuelve la barra lentamente hasta estirar los brazos.'],w:'Los dorsales, que dan amplitud a la espalda.',x:'Evita tirar la barra detrás de la nuca o balancearte para moverla.'},
+  {n:'Remo sentado en polea',s:3,r:'10–12',d:'90 s',f:'seatedRow',st:['Siéntate con las rodillas ligeramente flexionadas y la espalda recta.','Sujeta el agarre con ambas manos.','Tira hacia el abdomen llevando los codos hacia atrás y aprieta suavemente los omóplatos.','Regresa lentamente sin encorvar la espalda.'],w:'La zona media de la espalda y los músculos de la postura.'},
   {n:'Face pull en polea',s:2,r:'12–15',d:'60–75 s',f:'facePull',st:['Coloca la polea a la altura de la cara.','Tira de la cuerda hacia la frente, separando las manos.','Lleva los codos hacia fuera sin encoger los hombros.','Regresa lentamente sin arquear la espalda.'],w:'La parte posterior de los hombros y la espalda alta.'},
-  {n:'Curl martillo con mancuernas',s:2,r:'10–12',d:'60 s',f:'hammer',st:['Sujeta las mancuernas con las palmas mirándose entre sí.','Dobla los codos para subirlas sin mover el tronco.','Baja lentamente.'],w:'Complementa el bíceps y los músculos del antebrazo.'}
+  {n:'Curl de bíceps con mancuernas',s:2,r:'10–12',d:'60–75 s',f:'curl',st:['Ponte de pie con una mancuerna en cada mano y las palmas hacia delante.','Mantén los codos cerca del cuerpo.','Dobla los codos para subir las mancuernas.','Baja despacio sin balancearte ni arquear la espalda.'],w:'La parte delantera del brazo (bíceps).'},
+  {n:'Dead bug',s:3,r:'8 por lado',d:'45–60 s',f:'deadBug',st:['Acuéstate boca arriba con los brazos hacia el techo y las rodillas dobladas a 90 grados.','Extiende lentamente un brazo y la pierna contraria.','No dejes que la zona lumbar se despegue del suelo.','Regresa y cambia de lado.'],w:'El control y la estabilidad del abdomen, sin cargar la espalda.'}
  ]},
- {id:'sabado',short:'Sáb',name:'Sábado',k:'legs',group:'Piernas y abdomen',goal:'Segunda sesión de pierna con sentadilla, glúteos y control del abdomen.',ex:[
-  {n:'Sentadilla con mancuerna al pecho',s:3,r:'10',d:'90 s',f:'goblet',st:['Sostén una mancuerna frente al pecho.','Separa los pies más o menos al ancho de los hombros.','Dobla las rodillas y lleva la cadera hacia abajo y atrás, con los pies bien apoyados.','Sube empujando el suelo.'],w:'Muslos y glúteos.',x:'Si pierdes el equilibrio, empieza sin peso o usa una máquina guiada.'},
-  {n:'Curl femoral sentado',s:3,r:'12',d:'75–90 s',f:'legCurl',st:['Siéntate con la espalda apoyada.','Flexiona las rodillas llevando el rodillo hacia abajo y atrás.','Regresa lentamente sin dejar caer el peso.'],w:'La parte posterior de los muslos.'},
-  {n:'Elevación de talones',s:2,r:'12–15',d:'60 s',f:'calf',st:['Eleva los talones hasta quedar de puntillas.','Haz una pausa arriba.','Baja lentamente, sin rebotar.'],w:'Las pantorrillas.'},
-  {n:'Dead bug',s:2,r:'8 por lado',d:'45–60 s',f:'deadBug',st:['Acuéstate boca arriba con los brazos hacia el techo y las rodillas dobladas a 90 grados.','Extiende lentamente un brazo y la pierna contraria.','No dejes que la zona lumbar se despegue del suelo.','Regresa y cambia de lado.'],w:'El control y la estabilidad del abdomen, sin hacer abdominales de flexión.'},
-  {n:'Puente de glúteos',s:2,r:'12–15',d:'60 s',f:'bridge',st:['Acuéstate boca arriba con las rodillas dobladas y los pies apoyados.','Aprieta los glúteos y eleva la cadera hasta alinear hombros, cadera y rodillas.','Haz una pausa breve arriba.','Baja despacio, sin arquear de más la espalda.'],w:'Los glúteos y la parte posterior de la cadera.'}
+ {id:'jueves',short:'Jue',name:'Jueves',k:'legs',c:'Caminata en inclinación',group:'Piernas y abdomen',goal:'Segunda sesión de pierna con máquinas, más repeticiones y un trabajo de abdomen.',ex:[
+  {n:'Prensa de piernas',s:3,r:'12–15',d:'90 s',f:'legPress',st:['Siéntate con toda la espalda apoyada en el respaldo.','Coloca los pies en la plataforma, más o menos al ancho de los hombros.','Baja doblando las rodillas hasta donde la espalda y la pelvis sigan apoyadas.','Empuja sin bloquear las rodillas.'],w:'Muslos y glúteos, con un peso algo menor que el lunes y más repeticiones.'},
+  {n:'Extensión de cuádriceps',s:2,r:'12–15',d:'60–75 s',f:'legExt',st:['Siéntate con la espalda apoyada y las piernas detrás del rodillo.','Estira las rodillas hasta casi extenderlas por completo.','Baja lentamente hasta la posición inicial.'],w:'La parte delantera de los muslos. No des patadas ni uses impulso.'},
+  {n:'Curl femoral sentado',s:3,r:'12–15',d:'75 s',f:'legCurl',st:['Siéntate con la espalda apoyada.','Flexiona las rodillas llevando el rodillo hacia abajo y atrás.','Regresa lentamente sin dejar caer el peso.'],w:'La parte posterior de los muslos.'},
+  {n:'Elevación de talones',s:2,r:'15',d:'60 s',f:'calf',st:['Coloca la parte delantera de los pies en la plataforma de la máquina.','Eleva los talones hasta quedar de puntillas.','Haz una pausa breve arriba.','Baja de forma controlada, sin rebotar.'],w:'Las pantorrillas.'},
+  {n:'Plancha abdominal',s:3,r:'30–45 s',d:'45–60 s',f:'plank',st:['Apoya los antebrazos y las puntas de los pies en el suelo.','Mantén cabeza, espalda, cadera y piernas alineadas.','Aprieta el abdomen y los glúteos.','Respira normalmente y no hundas la cintura.'],w:'La estabilidad del tronco. Intenta sumar 5 segundos cada semana.'}
  ]},
- {id:'domingo',short:'Dom',name:'Domingo',k:'rest',group:'Descanso',goal:'Descansa, duerme bien y deja que los músculos se recuperen. Una caminata tranquila es opcional.',ex:[]}
+ {id:'viernes',short:'Vie',name:'Viernes',k:'push',c:'Trote por intervalos',group:'Pecho, hombros y abdomen',goal:'Complementa el martes con otros ángulos y cierra con trabajo de abdomen.',ex:[
+  {n:'Press inclinado con mancuernas',s:3,r:'10–12',d:'90 s',f:'inclineDB',st:['Coloca el banco con una inclinación de unos 30 grados.','Sostén una mancuerna en cada mano, a los lados de la parte superior del pecho.','Empuja las mancuernas hacia arriba y ligeramente hacia dentro.','Bájalas lentamente, manteniendo las muñecas rectas.'],w:'La parte superior del pecho y los hombros.'},
+  {n:'Aperturas de pecho en máquina',s:2,r:'12–15',d:'60–75 s',f:'pecDeck',st:['Siéntate en la máquina con la espalda apoyada.','Coloca los brazos en las almohadillas o sujeta las agarraderas, según el modelo.','Junta los brazos delante del pecho, como si abrazaras un árbol grande.','Regresa lentamente hasta sentir un estiramiento suave, sin llevar los codos demasiado atrás.'],w:'El pecho. Usa un recorrido cómodo para los hombros.'},
+  {n:'Elevaciones laterales',s:2,r:'12–15',d:'60 s',f:'lateralRaise',st:['Sostén mancuernas ligeras a los lados del cuerpo.','Eleva los brazos hacia los lados con los codos ligeramente doblados.','Llega más o menos a la altura de los hombros.','Baja despacio.'],w:'La parte lateral del hombro.'},
+  {n:'Extensión de tríceps sobre la cabeza',s:2,r:'10–12',d:'60–75 s',f:'overhead',st:['Ponte de espaldas a una polea baja o sujeta una mancuerna ligera con ambas manos.','Lleva las manos detrás de la cabeza con los codos doblados.','Extiende los codos para llevar las manos hacia arriba.','Regresa lentamente, con los codos estables.'],w:'El tríceps.',x:'Si te duele el hombro, suspende este ejercicio y haz la extensión en polea del martes.'},
+  {n:'Dead bug',s:3,r:'8 por lado',d:'45–60 s',f:'deadBug',st:['Acuéstate boca arriba con los brazos hacia el techo y las rodillas dobladas a 90 grados.','Extiende lentamente un brazo y la pierna contraria.','No dejes que la zona lumbar se despegue del suelo.','Regresa y cambia de lado.'],w:'El control del abdomen y la zona lumbar.'}
+ ]},
+ {id:'sabado',short:'Sáb',name:'Sábado',k:'pull',c:'Trote por intervalos',group:'Espalda y bíceps',goal:'Segunda sesión de tracción, con agarres y máquinas distintas a las del miércoles.',ex:[
+  {n:'Jalón al pecho con agarre neutro',s:3,r:'10–12',d:'90 s',f:'neutralPulldown',st:['Siéntate y agarra las manijas con las palmas mirándose entre sí.','Lleva los codos hacia abajo y acerca las manijas a la parte superior del pecho.','Devuelve el peso lentamente.'],w:'Los dorsales y los brazos.'},
+  {n:'Remo con pecho apoyado',s:3,r:'10–12',d:'90 s',f:'chestRow',st:['Apoya el pecho en el soporte de la máquina.','Sujeta las manijas y lleva los codos hacia atrás.','Junta suavemente los omóplatos al terminar el movimiento.','Regresa sin despegar el pecho del soporte.'],w:'La espalda media. El soporte evita balanceos.'},
+  {n:'Face pull en polea',s:2,r:'12–15',d:'60–75 s',f:'facePull',st:['Coloca la polea a la altura de la cara.','Tira de la cuerda hacia la frente, separando las manos.','Lleva los codos hacia fuera sin encoger los hombros.','Regresa lentamente sin arquear la espalda.'],w:'La parte posterior de los hombros. Ayuda a no encorvarte.'},
+  {n:'Curl martillo con mancuernas',s:2,r:'10–12',d:'60 s',f:'hammer',st:['Sujeta las mancuernas con las palmas mirándose entre sí.','Dobla los codos para subirlas sin mover el tronco.','Baja lentamente.'],w:'Bíceps, braquial y antebrazo: dan grosor al brazo.'},
+  {n:'Curl en banco Scott o máquina',s:2,r:'10–12',d:'60–75 s',f:'preacher',st:['Apoya la parte posterior de los brazos en el cojín.','Dobla los codos para subir el peso.','Baja despacio, sin estirar los codos de golpe ni despegar los brazos del cojín.'],w:'Aísla el bíceps y evita el balanceo del cuerpo.'}
+ ]},
+ {id:'domingo',short:'Dom',name:'Domingo',k:'rest',group:'Descanso',goal:'Descansa, duerme bien y deja que los músculos se recuperen. Una caminata tranquila de 30–45 minutos suma al objetivo sin cansarte.',ex:[]}
 ];
 
 // ---------- estado ----------
@@ -377,7 +379,7 @@ function renderPanel(){
     ${isToday?`<div class="progress"><span id="pt">${n} de 5 hechos hoy</span><div class="bar"><i id="pb" style="width:${n*20}%"></i></div></div>`:''}
   </div>
   <div class="session" aria-label="Orden de la sesión">
-    <div><b>5 min</b>Caminar</div><div><b>15 min</b>Trote moderado</div><div><b>5 min</b>Caminar</div><div><b>~55–65 min</b>Pesas: 5 ejercicios con descansos</div>
+    <div><b>5 min</b>Caminar</div><div><b>20 min</b>${d.c}</div><div><b>5 min</b>Caminar</div><div><b>~55–60 min</b>Pesas: 5 ejercicios con descansos</div>
   </div>
   <div class="grid">${d.ex.map((e,j)=>{const key=d.id+'-'+j,on=!!done[key];return `
     <article class="ex${on&&isToday?' is-done':''}">

@@ -1,5 +1,5 @@
 // Cambia el número de versión cada vez que actualices el index.html
-const CACHE = 'rutina-v5';
+const CACHE = 'rutina-v6';
 
 const ARCHIVOS = [
   './',
